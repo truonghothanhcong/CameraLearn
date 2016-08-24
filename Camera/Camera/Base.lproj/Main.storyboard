@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWc-IS-LPd">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Galary" id="k4n-lu-ubr"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JPl-Nz-2Kw"/>
+                                    <barButtonItem title="Photo" id="Hml-UL-62k"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ewx-5g-c3F"/>
+                                    <barButtonItem title="Video" id="e4Y-4i-lPz"/>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h01-VX-OEN">
+                                <rect key="frame" x="0.0" y="324" width="320" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="67R-OW-MxA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CWc-IS-LPd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4mk-eV-Qmj"/>
+                            <constraint firstItem="h01-VX-OEN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BhO-K0-tPu"/>
+                            <constraint firstItem="CWc-IS-LPd" firstAttribute="top" secondItem="h01-VX-OEN" secondAttribute="bottom" id="YYs-9b-i9I"/>
+                            <constraint firstAttribute="trailing" secondItem="CWc-IS-LPd" secondAttribute="trailing" id="Zms-U5-xaR"/>
+                            <constraint firstAttribute="trailing" secondItem="h01-VX-OEN" secondAttribute="trailing" id="cDK-KT-4Th"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CWc-IS-LPd" secondAttribute="bottom" id="vPc-Cc-DeL"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="399"/>
+        </scene>
+    </scenes>
+</document>
