@@ -20,11 +20,23 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWc-IS-LPd">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
-                                    <barButtonItem title="Galary" id="k4n-lu-ubr"/>
+                                    <barButtonItem title="Galary" id="k4n-lu-ubr">
+                                        <connections>
+                                            <action selector="showGalary:" destination="BYZ-38-t0r" id="mCF-NH-K4O"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="JPl-Nz-2Kw"/>
-                                    <barButtonItem title="Photo" id="Hml-UL-62k"/>
+                                    <barButtonItem title="Photo" id="Hml-UL-62k">
+                                        <connections>
+                                            <action selector="takePhoto:" destination="BYZ-38-t0r" id="tke-5k-yRq"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ewx-5g-c3F"/>
-                                    <barButtonItem title="Video" id="e4Y-4i-lPz"/>
+                                    <barButtonItem title="Video" id="e4Y-4i-lPz">
+                                        <connections>
+                                            <action selector="recordVideo:" destination="BYZ-38-t0r" id="Dvz-CY-3Uq"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h01-VX-OEN">
@@ -45,6 +57,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="h01-VX-OEN" id="F9E-s1-ieV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

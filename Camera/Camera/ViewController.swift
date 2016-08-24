@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @IBOutlet weak var photoImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,35 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func showGalary(sender: AnyObject) {
+        let picker = UIImagePickerController()
+        
+        picker.delegate = self
+        picker.sourceType = .PhotoLibrary
+        
+        presentViewController(picker, animated: true, completion: nil)
+    }
+    
+    @IBAction func takePhoto(sender: AnyObject) {
+        let picker = UIImagePickerController()
+        
+        picker.delegate = self
+        picker.sourceType = .Camera
+        
+        presentViewController(picker, animated: true, completion: nil)
+    }
 
+    @IBAction func recordVideo(sender: AnyObject) {
+        
+    }
+    
+    
+    // require real devide
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        photoImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
 }
 
